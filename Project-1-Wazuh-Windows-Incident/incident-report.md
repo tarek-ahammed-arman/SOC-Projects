@@ -20,12 +20,12 @@ Wazuh SIEM detected a series of suspicious authentication and account-related ac
 ## 4. Monitoring Context and Key Evidence
 
 ### Screenshot 1: Wazuh Dashboard Overview
-![Wazuh Dashboard](screenshots/01-wazuh-dashboard.png)
+![Wazuh Dashboard](screenshots/01-wazuh-dahsboard.png)
 - Confirms the Wazuh SIEM is operational.
 - Validates that alerts in this report are from a live monitored system.
 
 ### Screenshot 2: Active Agent
-![Active Agent](screenshots/02-agenrts-view.png)
+![Active Agent](screenshots/02-agents-view.png)
 - Shows the Windows agent is active and reporting events.
 
 *For detailed incident evidence, see the screenshots folder:*  
