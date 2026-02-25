@@ -22,7 +22,7 @@ Wazuh SIEM detected multiple failed login attempts against a local Windows user 
 ## 4. Monitoring Context and Key Evidence
 
 ### Screenshot 1: Wazuh Dashboard Overview
-![Wazuh Dashboard](screenshots/01-agent-active.png.png)  
+![Wazuh Dashboard](screenshots/01-agent-active.png)  
 - Confirms the Wazuh SIEM is operational.  
 - Shows the Windows agent is active and reporting events.  
 - Validates that alerts in this report are from a live monitored system.
