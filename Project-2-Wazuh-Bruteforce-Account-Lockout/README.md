@@ -1,7 +1,7 @@
-# SOC Brute-Force Detection and Account Lockout Using Wazuh
+# Brute-Force Detection and Account Lockout Analysis Using Wazuh SIEM
 
 ## Overview
-This project demonstrates how a SOC analyst detects a brute-force login attempt and verifies that the attack was blocked using account lockout controls. Wazuh SIEM was used to monitor Windows authentication logs and confirm that no successful logins occurred for the locked account.
+This project demonstrates how authentication security events are monitored and analyzed using Wazuh SIEM. It focuses on detecting brute-force login attempts, evaluating account lockout behavior, and validating system response using Windows authentication logs in a controlled environment.
 
 ## Lab Environment
 - SIEM: Wazuh 4.7.5
@@ -24,4 +24,4 @@ This project demonstrates how a SOC analyst detects a brute-force login attempt 
 - VMware for virtual lab setup
 
 ## Project Outcome
-Wazuh successfully detected repeated login failures followed by an automatic account lockout. Post-incident analysis confirmed that the locked user did not successfully authenticate again, while only SYSTEM logon events were observed. This validated that the security control worked as expected.
+Wazuh successfully detected repeated failed login attempts followed by an automatic account lockout. Post-incident analysis confirmed that no successful authentication occurred after the lockout, indicating effective enforcement of access control mechanisms. This exercise validated the reliability of authentication monitoring and security control behavior in a simulated environment.
