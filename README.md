@@ -1,8 +1,6 @@
-# SOC Projects Portfolio
+# Security Monitoring & Incident Detection Lab
 
-This repository contains hands-on Security Operations Center (SOC) labs focused on log analysis, threat detection, and incident response using Wazuh SIEM.
-
-The projects simulate real-world security monitoring and incident investigation workflows, demonstrating practical SOC skills in enterprise-like environments.
+This repository contains hands-on labs focused on security monitoring, threat detection, and incident analysis using SIEM tools. The projects simulate real-world detection and response workflows in enterprise-like environments.
 
 ---
 
@@ -34,9 +32,21 @@ Folder: `Project-2-Wazuh-Bruteforce-Account-Lockout`
 
 ---
 
+## Security Engineering Perspective
+
+These projects emphasize understanding attacker behavior, analyzing logs for detection, and improving visibility into systems to support stronger defensive security practices.
+
+---
+
 ## Repository Purpose
 
-The goal of this repository is to showcase job-ready SOC analyst skills by simulating enterprise-style monitoring, detection, and response scenarios using Wazuh SIEM and Windows endpoints.
+The goal of this repository is to demonstrate how security events are detected, analyzed, and investigated through structured monitoring and incident response scenarios.
+
+---
+
+## Cloud Security Extension (Planned)
+
+Future work will extend these detection concepts into cloud environments, including AWS logging, IAM activity monitoring, and cloud-based threat detection
 
 ---
 
@@ -44,4 +54,4 @@ The goal of this repository is to showcase job-ready SOC analyst skills by simul
 
 For enterprise IT operations and endpoint-focused labs:
 
-* IT-Support-to-Security-Portfolio
+* system-security-operations-lab
