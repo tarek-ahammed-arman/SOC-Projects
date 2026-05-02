@@ -1,7 +1,7 @@
-# SOC Log Analysis Using Wazuh SIEM
+# Security Monitoring and Log Analysis Using Wazuh SIEM
 
 ## Overview
-This project focuses on basic SOC analyst tasks using Wazuh SIEM. The goal was to collect and analyze Windows security logs to understand common security events such as failed logins, successful logins, user creation, and privilege escalation.
+This project focuses on security monitoring and incident analysis using SIEM techniques. The goal was to collect and analyze Windows security logs to understand common security events such as failed logins, successful logins, user creation, and privilege escalation.
 
 ## Lab Environment
 - SIEM: Wazuh 4.7.5
@@ -24,4 +24,4 @@ This project focuses on basic SOC analyst tasks using Wazuh SIEM. The goal was t
 - PowerShell for basic Windows commands
 
 ## Project Outcome
-The project successfully identified multiple security events, including a privilege escalation activity where a user was added to the local Administrators group. These events were analyzed using the Wazuh dashboard and mapped to relevant MITRE ATT&CK techniques, demonstrating real-world SOC monitoring skills.
+The project successfully identified multiple security events, including a privilege escalation activity where a user was added to the local Administrators group. These events were analyzed using the Wazuh dashboard and mapped to relevant MITRE ATT&CK techniques, demonstrating real-world security monitoring and incident detection workflows.
