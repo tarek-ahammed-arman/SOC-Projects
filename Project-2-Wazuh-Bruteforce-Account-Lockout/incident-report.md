@@ -21,38 +21,58 @@ Wazuh SIEM detected multiple failed login attempts against a local Windows user 
 
 ## 4. Monitoring Context and Key Evidence
 
-### Screenshot 1: Wazuh Dashboard Overview
-![Wazuh Dashboard](screenshots/01-agent-active.png)  
-- Confirms the Wazuh SIEM is operational.  
-- Shows the Windows agent is active and reporting events.  
+### Wazuh Dashboard Overview
+
+![Wazuh Dashboard](screenshots/01-agent-active.png)
+
+- Confirms the Wazuh SIEM is operational.
+- Shows the Windows agent is active and reporting events.
 - Validates that alerts in this report are from a live monitored system.
 
-### Screenshot 2: Account Lockout Policy Configuration
-![Account Lockout Policy](screenshots/02-lockout-policy.png)  
-- Shows Windows account lockout policy is enabled.  
+### Account Lockout Policy Configuration
+
+![Account Lockout Policy](screenshots/02-lockout-policy.png)
+
+- Shows Windows account lockout policy is enabled.
 - Confirms defensive controls were in place before the attack.
 
-### Screenshot 3: User Account Locked
-![User Locked](screenshots/03-account-locked.png)  
+### User Account Locked
+
+![User Locked](screenshots/03-account-locked.png)
+
 - Multiple failed login attempts locked the user **Tarek**.
 
-*For detailed incident evidence, see the Screenshots folder:*  
-- Screenshot 4 – Logon Failure Events  
-- Screenshot 5-6 – Account Lockout Event  
-- Screenshot 7 – Post-Lockout Authentication Activity  
+### Logon Failure Events
+
+![Logon Failure Events](screenshots/04-failed-logons.png)
+
+Multiple failed login attempts were recorded for the user **Tarek**, consistent with a brute-force attempt.
+
+### Account Lockout Event
+
+![Account Lockout Event](screenshots/05-account-lockout.png)
+
+Wazuh detected an account lockout after repeated failures, confirming that the security policy was enforced.
+
+### Account Lockout Details
+
+![Account Lockout Details](screenshots/06-lockout-details.png)
+
+The lockout event provides additional details about the affected account and the authentication activity that triggered the defensive control.
+
+### Post-Lockout Authentication Activity
+
+![No Successful Logon](screenshots/07-no-success-logon.png)
+
+Only the **SYSTEM** account logged in successfully. The locked user **Tarek** had no successful logons, confirming the attacker was blocked.
 
 ---
 
 ## 5. Incident Evidence and Analysis
 
-- **Screenshot 4: Logon Failure Events**  
-  Multiple failed login attempts were recorded for the user **Tarek**, consistent with a brute-force attempt.
+Multiple failed login attempts were recorded for the user **Tarek**, followed by an automatic account lockout. Wazuh detected the authentication failures and the resulting lockout event.
 
-- **Screenshot 5-6: Account Lockout Event**  
-  Wazuh detected an account lockout after repeated failures, confirming that the security policy was enforced.
-
-- **Screenshot 7: Post-Lockout Authentication Activity**  
-  Only the **SYSTEM** account logged in successfully. The locked user **Tarek** had no successful logons, confirming the attacker was blocked.
+Post-lockout monitoring showed only **SYSTEM** account activity and no successful logon for the targeted user. This indicates that the account lockout mechanism prevented the attempted brute-force attack from resulting in unauthorized access.
 
 ---
 
@@ -68,10 +88,10 @@ The attempted brute-force attack did not result in unauthorized access. The acco
 ---
 
 ## 8. Recommendations
-- Maintain strict account lockout policies.  
-- Monitor repeated authentication failures.  
-- Alert on account lockout events.  
-- Review authentication logs regularly.  
+- Maintain strict account lockout policies.
+- Monitor repeated authentication failures.
+- Alert on account lockout events.
+- Review authentication logs regularly.
 
 ---
 
